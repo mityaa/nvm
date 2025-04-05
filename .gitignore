@@ -1,0 +1,10 @@
+﻿*.o
+my_executable
+build/
+*.exe
+*.out
+*.so
+*.dll
+*.a
+*~
+*.idea/*
