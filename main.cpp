@@ -1,15 +1,14 @@
 ﻿#include <iostream>
+#include <vector>
 
-int main(int argc, char* argv[]) {
-    if (argc < 2) {
-        std::cout << "Использование: утилита <аргумент>" << std::endl;
-        return 1;
+int main(const int argc, char* args[]) {
+    const std::vector<char*> args_vector(args, args + argc);
+
+    if (const int argsCount = args_vector.size(); argsCount <= 1)
+    {
+        std::cout << "Not enough arguments. Help will be invoked" << std::endl;
+        return 0;
     }
-
-
-    std::string argument = argv[1];
-
-     std::cout << "Вы ввели аргумент: " << argument << std::endl;
 
     return 0;
 }
